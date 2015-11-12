@@ -1,0 +1,149 @@
+/**
+ * Created by Administrator on 2014/10/16.
+ */
+$(function() {
+    juicer.set({
+        'tag::interpolateOpen': '{{',
+        'tag::interpolateClose': '}}'
+    });
+    var cal129 = new Calculator('129'),
+        caln = new Calculator('normal');
+
+    function getCal(mode) {
+        if (mode === '129') {
+            return cal129;
+        } else {
+            return caln;
+        }
+    }
+
+    var rate_dic = {12: 10, 18: 10.5, 24: 11, 36: 12},
+        $jyc = $("input.mode[value='129']").closest('.calToolTBoxC');
+    if ($jyc.length == 0) {
+        $jyc = $("input.mode[value='129']").closest('.tab_content1');
+    }
+
+    $(".period").closest(".calFBoxRPer").find("a").click(function () {
+        var rateVal = $(this).find("span").text();
+        $(this).closest(".calFBoxRPer").next(".rate").val(rate_dic[rateVal]);
+    })
+
+
+    $(".tab_switch_ctn:eq(1) .principal").focus(function(){
+        $(".principal").not(this).addClass("disable-calNumHide");
+        $(".principal").not(this).val("");
+        $(this).removeClass("disable-calNumHide");
+
+       // $("input[name='compute_type129']").val($(".tab_switch_ctn:eq(1) .principal").index($(this)));
+        var _index = $(".tab_switch_ctn:eq(1) .principal").index($(this));
+
+        $("input[name='compute_type129']").val(_index);
+    });
+
+    $(function(){
+        //提示
+        $(".holderBox").click(function(){
+           $(this).find(".m-holderTxt").hide();
+            $(this).find("input").focus();
+        });
+        $(".calNumHide").blur(function(){
+            if($(this).val() ==""){
+                $(this).prev("label").show();
+
+            }
+
+        })
+
+        $(".calculatorBtn129").click(function(){
+
+            var $con = $(".tab_switch_ctn:eq(1) .principal").eq(0).closest('.calToolTBoxC');
+            if($con.length==0){
+                $con = $(".tab_switch_ctn:eq(1) .principal").eq(0).closest('.tab_content1');
+            }
+            var principal = $.trim($con.find('.calNumHide').not(".disable-calNumHide").val()),
+                mode = $con.find('.mode').val(),
+                range_dic = {'jy':{'min':10000, 'max':500000}, 'normal':{'min':1000, 'max':500000}, 'lender':{'min':100,'max':5000000},'129':{'min':100,'max':5000000}};
+            if(!/^[0-9]+(.[0-9]{1,2})?$/.test(principal)){
+                alert("借款金额只能输入数字且最多小数点后两位");
+                $con.find('.principal').next(".calNum").html('<span class="png n0"></span>');
+                $con.find(".calNumHide").val("");
+                return;
+            }  else if(principal<range_dic[mode]['min']||principal>range_dic[mode]['max']){
+                alert("单笔最低"+ (mode==='lender'?"出借":"借款") +"额度为"+ range_dic[mode]['min'] + "元，最高"+ (mode==='lender'?"出借":"借款") +"额度为" + range_dic[mode]['max'] + "元");
+                $con.find('.principal').next(".calNum").html('<span class="png n0"></span>');
+                $con.find(".calNumHide").val("");
+                return;
+            }
+
+
+            var $con = $(this).closest('.calToolTBoxC');
+            var principal = $.trim($con.find('.calNumHide').not(".disable-calNumHide").val()),
+                period = $con.find('.period').val(),
+                rate = $con.find('.rate').val(),
+                mode = $con.find('.mode').val(),
+                range_dic = {'129':{'min':10000, 'max':500000}, 'normal':{'min':1000, 'max':500000}, 'lender':{'min':100,'max':5000000}};
+            var status = $("input[name='compute_type129']").val();
+            var plan;
+            var actualMoneys ;//存储实得还是借款总额
+            var replaceTxt ;//替换文本
+            if(period ==""){
+                alert("请选择期数！！");
+            }
+            if(status ==0){
+                 plan = getCal(mode).calculate(parseInt(principal), period, rate/100);
+
+                actualMoneys = plan.loan;
+                replaceTxt ="实得金额";
+            }else{
+               var cals = new Calculator('129');
+               var value  = cals.calPrincipal(parseInt(principal), period);
+
+
+                plan = getCal(mode).calculate(parseInt(value), period, rate/100);
+
+                actualMoneys = value;
+                replaceTxt ="申请金额";
+
+            }
+
+
+            plan['mode'] = mode;
+            plan['repay'] = round(parseFloat(plan.principal) + parseFloat(plan.interest));
+            // 利息+平台费
+            plan['total2'] = round(parseFloat(plan.interest) +  parseFloat(plan.fare));
+            //显示计算结果
+
+
+            $(".totals2").html(plan['total2']);
+            $(".payMonth").html(plan['month_pay']);
+
+            plan.principal = parseFloat(actualMoneys);
+            var htmls = juicer($('#' + mode + '-template').html(), plan);
+            var reg=new RegExp("实得金额","gm");
+            htmls =htmls.replace(reg,replaceTxt);
+            $(".calRInsert").eq(1).slideDown(function(){
+                var addHeight = $('.calRInsert').eq(1).offset().top;
+                $('body,html').animate({scrollTop:addHeight},800);
+                $(this).html(htmls);
+            });
+
+            //显示还款记录
+
+
+        })
+        //tab切换
+        $(".tab_switch_box  ul.clearfix li").click(function(){
+            var _index = $(this).index();
+
+            $(".tab_switch_box  .tab_switch_ctn").hide();
+            $(".tab_switch_box  .tab_switch_ctn").eq(_index).show();
+            $(".calRInsert").hide();
+            $(".calToolTBoxT129 a").eq(0).trigger("click");
+            $(".calToolTBoxT a").eq(0).trigger("click");
+        })
+
+       
+
+    });
+
+});

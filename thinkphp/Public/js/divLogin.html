@@ -1,0 +1,57 @@
+<iframe src=''  frameborder="0" style="position:absolute; visibility:inherit; top:0px; left:0px; width:100%; height:100%; border:none; z-index:-1; filter='progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)';"></iframe>
+<div class="dialog_login">
+    <div class="fl login_b w400 mt5 mb15 dialog_login_from">
+        <form class="col666" name="theform" action="http://10.106.4.24:8080/dologin.jhtml" method="post">
+            <div class="counterBox_row clearfix mt10">
+                <div class=" w60 colblack2 fl tr"><label class="label_text" for="username">邮&nbsp;&nbsp;箱</label></div>
+                <div class=" tl pl80"><input type="text" class="input_text w240" maxlength="50" name="username" id="username"></div>
+            </div>
+            <div class="counterBox_row clearfix pt5 warn_text lh150">
+                <div class="w60 fl tr"><label class="">&nbsp;</label></div>
+                <div class=" tl pl80 colred4 s_nick_user" id="s_nick_user"></div>
+            </div>
+            <div class="counterBox_row clearfix mt5">
+                <div class=" w60 colblack2 fl tr"><label class="label_text" for="password">密&nbsp;&nbsp;码</label></div>
+                <div class=" tl pl80"><input type="password" class="input_text w240" maxlength="16"  name="password" id="password"  ></div>
+            </div>
+            <div class="counterBox_row clearfix pt5 warn_text lh150">
+                <div class="w60 fl tr"><label class="">&nbsp;</label></div>
+                <div class=" tl pl80 colred4 s_user_pwd1" id="s_user_pwd1"></div>
+            </div>
+            <div class="counterBox_row clearfix mt5">
+                <div class=" w60 colblack2 fl tr"><label class="label_text">验证码</label></div>
+                <div class=" tl pl80">
+                    <input type="text" class="input_text w80px" maxlength="4" id="srand" name="srand" >
+                    <img src="http://10.106.5.206:8080/p2pweb/test/rand.action" class="validate vm ml5" onclick="change_rand();"/>
+                    <a href="javascript:change_rand();" class="colf57007">看不清？换图片</a>
+                </div>
+            </div>
+            <div class="counterBox_row clearfix pt5 warn_text lh150">
+                <div class="w60 fl tr"><label class="">&nbsp;</label></div>
+                <div class=" tl pl80 colred4 s_srand" id="s_srand"></div>
+            </div>
+            <div class="counterBox_row clearfix mt5 h34 lh34">
+                <div class=" w60 colblack2 fl tr"><label class="label_text">&nbsp;</label></div>
+                <div class=" tl pl80">
+                    <input type="submit" class="login_btn b0 fl hand" value="登录"/>
+                    <label class="dib ml5"><input type="checkbox" class="vv" id="rememberMe" name="rememberMe"/>记住用户名&nbsp;&nbsp;|</label>
+                    <a href="http:www.yirendai.com/resetpwdbymobile/checkUserInfo.jsp" class="colblue1 pl10 dib">忘记密码？</a>
+                    <input type="hidden" name="fromSite" id="fromSite" value="YRD"/>
+                    <input id="tourl" name="tourl" type="hidden" value="http://10.106.5.206:8080/p2pweb/login/gotoUrl.jsp"/>
+                    <input id="loginUrl" name="loginUrl" type="hidden" value="http://www.yirendai.com/pages/auth/login.jsp"/>
+                </div>
+            </div>
+        </form>
+        <p class="mt20 ml30"><strong>绑定合作网站账号</strong></p>
+        <p class="mt10 ml30">
+            <a class="sina_weibo dib col666" href="http://10.106.4.24:8080/oauth/login-sina.jhtml?state=YRD">新浪微博</a>
+            <a class="renren dib col666" href="http://10.106.4.24:8080/oauth/login-renren.jhtml?state=YRD">人人网</a>
+            <a class="qq dib col666" href="http://10.106.4.24:8080/oauth/login-qq.jhtml?state=YRD">QQ登录</a>
+            <a class="douban dib col666" href="http://10.106.4.24:8080/oauth/login-douban.jhtml?state=YRD">豆瓣登录</a>
+        </p>
+    </div>
+    <div class="fl register_b w300 mt25 mb15 ml10 tc">
+        <img src="http://10.106.5.206:8080/p2pweb/res/n_images/dialog_login_register.png" class=" " />
+        <a href="http://10.106.5.206:8080/p2pweb/registForward/guide.action" class="regiister_btn2 bc mt40">免费注册</a>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+body{padding:0px;margin:0px;}
+.top_2013{height:29px;background:url(/ccms/images/header_2013/header_2013_topbg.gif) repeat-x;line-height:29px;color:#555;font-family:\5B8B\4F53 ;}
+.w960_2013{width:960px;margin:0px auto;}
+.login_2013{float:right;}
+.header_2013 a{color:#555;}
+.header_2013 .orange,
+.header_2013 a.orange{color:#ff7200;}
+.header_2013 .gray{color:#c8c8c8;}
+.contactUs_2013{float:left;}
+.contactUs_2013 a{float:left;margin-right:18px;}
+.contactUs_2013 img{float:left;margin:4px 7px 0px 0px;}
+.logo_2013{height:78px;}
+.logo_2013 a.logo2013{float:left;width:219px;height:47px;background:url(/ccms/images/header_2013/header_2013_logo.png) no-repeat;margin:17px 0px 0px 2px;overflow:hidden;text-indent:-900px;}
+*html .logo_2013 a.logo2013{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="/ccms/images/header_2013/header_2013_logo.png");background:none;}
+*html .logo_2013 div span{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="/ccms/images/header_2013/header_2013_400.png");background:none;}
+
+/*.logo_2013 a.app{float:left;width:79px;height:71px;background:url(/ccms/images/header_2013/app.png) no-repeat;margin:3px 0px 0px 40px;overflow:hidden;text-indent:-900px;}*/
+/*html .logo_2013 a.app{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="images/header_2013/app.png");background:none;}*/
+.logo_2013 div{float:right;width:205px;height:29px;color:#666;padding-top:21px;}
+.logo_2013 div span{display:block;width:193px;height:23px;background:url(/ccms/images/header_2013/header_2013_400.png) no-repeat;margin:0px 0px 4px 5px;overflow:hidden;text-indent:-900px;}
+.nav_2013{background:#0098e1;height:43px;}
+.nav_2013 li{float:left;display:inline;line-height:43px;height:43px;position:relative;}
+.nav_2013 li a{padding:0px 34px;float:left;height:43px;line-height:43px;color:#fff;font-size:16px;font-family:\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',SimHei,SimSun;}
+.nav_2013 li a:hover{text-decoration:none;background:#127fc4;}
+.select_2013{background:#127fc4;}
+.nav_2013 li span{width:21px;height:13px;position:absolute;left:67px;top:-2px;}
+.nav_2013 li span.hot_2013{background:url(/ccms/images/header_2013/header_2013_hot.gif) no-repeat;}
+.nav_2013 li span.new_2013{background:url(/ccms/images/header_2013/header_2013_new.gif) no-repeat;}
+.nav_2013_shadow{height:7px;background:url(/ccms/images/header_2013/header_2013_navbg.gif) repeat-x;font-size:0px;line-height:0px;}
+/*晓光新增css，app下载图标*/
+.cms_app{float: left;width: 179px;display: block;height: 55px;margin: 23px 0px 0px 35px;overflow: hidden;}
+/*新增侧边栏*/
+* html,* html body{background-image:url(about:blank);background-attachment:fixed;width:100%;}
+.asideBg{background:#fff;opacity:.7;width:40px;position:fixed;top:0;right:0;height:100%;z-index:100;filter:alpha(opacity=70);-moz-opacity:.7;-khtml-opacity: 0.5;}
+.aside{width:40px;position:fixed;top:0;right:0;height:100%;z-index:100;}
+.aside,.asideBg{
+ _position:absolute; _height:expression(window.screen.availHeight-130);
+_left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));
+_top:expression(eval(document.documentElement.scrollTop));
+_overflow-y:auto;
+_overflow:hidden;
+}
+/*IE6侧边栏*/
+
+.aside .top a,.aside .bottom a{display:block;background:url(/ccms/images/newyrd/aside_icons.png) no-repeat transparent;width:40px;padding-left:40px;color:#fff;font-weight:bold;text-align:center;height:33px;margin-bottom:2px;text-decoration:none;font-family:"microsoft yahei";padding-top:7px;line-height:14px;}
+.aside .top a:hover,.aside .bottom a:hover{background-color:#2886e0;padding-left:0;background-image:none;}
+.aside .top{top:30%;position:absolute;}
+.aside .bottom{top:70%;position:absolute;}
+.aside .top .suggestion{background-position:0 -40px}
+.aside .top .downloadApp{background:url(/ccms/images/newyrd/mobile_icons.gif) no-repeat 12px 0;}
+.aside .bottom .qrCode{background-position:0 -120px;}
+.aside .bottom .qrCode:hover{background:url(/ccms/images/newyrd/aside_icons.png) no-repeat 0 -200px #2886e0}
+.aside .bottom .goTop{background-position:0 -160px}
+.qrCode-tips{background:url(/ccms/images/newyrd/qrcode.png?v=1) no-repeat;width:332px;height:179px;position:absolute;top:70%;right:40px;}
+
+
+.aside .close{background:url(/ccms/images/newyrd/close.png) no-repeat -18.5px 0;_width:40px;height:16px;display:block;margin-top:30px;cursor:pointer;}
+#asideHide{background:url(/ccms/images/newyrd/close.png) no-repeat 0 -24px;width:76px;height:25px;position:fixed;top:30px;right:-76px;cursor:pointer;_right:0;_display:none}
+#asideHide{ _position:absolute;
+    _left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));
+    _top:expression(eval(document.documentElement.scrollTop)+30);
+    _overflow-y:auto;
+_display:none}	
+/*意见反馈弹框*/
+.luo_mGBox{width:510px;margin:20px auto;}
+.formBox label{width:60px;line-height:30px;}

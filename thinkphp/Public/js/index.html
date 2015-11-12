@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<title>无标题文档</title>
+<script>
+ function gethotanswer(num){
+	 var datas = {
+			    "status": "success",
+			    "content": [
+			        {
+			            "qTitle": "何为精英标",
+			            "qLink": "/p2pweb/ask/questions.action?id=448"
+			        },
+			        {
+			            "qTitle": "好消息！宜人贷推出官方QQ群~",
+			            "qLink": "/p2pweb/ask/questions.action?id=521"
+			        }
+			    ]
+			};
+	 for(var i = 0; i < datas.content.length;i++){
+		 alert(datas.content[i].qTitle);
+	 }
+ }
+</script>
+</head>
+
+<body>
+<a onclick="gethotanswer(4)" href="#">点击</a>
+</body>
+</html>

@@ -1,0 +1,87 @@
+$(function(){
+var miniHtml = '<script type="text/template" id="jy-minitemplate">\
+<table cellspacing="0" cellpadding="0">\
+<tr><th width="50%">借款总额</th><td>{{principal}}元</td></tr>\
+<tr><th>还款总额(本金+平台费)</th><td>{{total}}元</td></tr>\
+<tr><th>月还款额</th><td><strong>{{month_pay}}元</strong></td></tr></table>\
+</script>\
+<script type="text/template" id="lender-minitemplate">\
+<table cellspacing="0" cellpadding="0">\
+<tr><th>出借金额(本金)</th><td>{{principal}}元</td></tr>\
+<tr><th>收获利息(利息)</th><td>{{interest}}元</td></tr>\
+<tr><th>回款总额</th><td><strong>{{repay}}</strong>元</td></tr>\
+</table>\
+</script>\
+<!-- calculator mini default style="width:256px/703px;display:none;"-->\
+<div class="calmini clearfix" style="width:256px;">\
+<div class="calminiL" style="width:29px;">\
+<a href="javascript:void(0);" class="calminiLBar defaultOn"><span class="png"></span></a>\
+<div class="calminiLM" style="display:none;">\
+<div class="calminiLMT clearfix">\
+<strong>计算结果</strong>\
+<span class="l">不够详细？<a href="http://www.yirendai.com/support/others/newjsq/">点击这里</a></span>\
+</div>\
+<div class="calminiLMTable"></div>\
+</div>\
+</div>\
+<div class="calminiR">\
+<div class="calminiRTabC"><form>\
+<div class="calminiRTabC_t">\
+<ul><li id="result0">借款金额：<span>0</span>元</li><li id="result1">借款期限：<span>0</span>期</li></ul>\
+</div>\
+<div class="calminiRTabC_m">\
+<input id="miniInput0" class="miniText principal" value="输入借款金额" type="text" maxlength="7" />\
+<div id="miniSel0" class="miniSel">\
+<div class="miniSelT clearfix">\
+<input class="miniSelInput period" type="text" value="选择借款期数"/>\
+<a class="miniSelIcon" href="javascript:void(0);"></a>\
+</div>\
+<div class="miniSelList" style="display:none;">\
+<ul><li><span>12</span>期</li><li><span>18</span>期</li><li><span>24</span>期</li><li><span>36</span>期</li></ul>\
+</div>\
+</div>\
+<input class="rate" id="rate" type="hidden" value="" />\
+<input class="mode" type="hidden" value="jy" />\
+<a class="miniBtn" id="jyd" href="javascript:void(0);">计算</a>\
+</div>\
+</form></div>\
+<div class="calminiRTabC" style="display:none;"><form>\
+<div class="calminiRTabC_t">\
+<ul><li id="result2">出借金额：<span>0</span>元</li><li id="result3">出借期限：<span>0</span>%</li><li id="result4">出借期限：<span>0</span>期</li></ul>\
+</div>\
+<div class="calminiRTabC_m">\
+<input id="miniInput1" class="miniText principal" type="text" value="输入借款金额" maxlength="7"/>\
+<div id="miniSel1" class="miniSel">\
+<div class="miniSelT clearfix">\
+<input class="miniSelInput rate" id="lRate" type="text" value="选择借款期数"/>\
+<a class="miniSelIcon" href="javascript:void(0);"></a>\
+</div>\
+<div class="miniSelList" style="display:none;">\
+<ul><li><span>10</span>%</li><li><span>10.5</span>%</li><li><span>11</span>%</li><li><span>12</span>%</li></ul>\
+</div>\
+</div>\
+<div id="miniSel2" class="miniSel">\
+<div class="miniSelT clearfix">\
+<input class="miniSelInput period" id="lPeriod" type="text" value="选择借款期数"/>\
+<a class="miniSelIcon" href="javascript:void(0);"></a>\
+</div>\
+<div id="miniSelscroll" class="miniSelList" style="display:none;">\
+<ul><li><span>12</span>期</li><li><span>18</span>期</li><li><span>24</span>期</li><li><span>36</span>期</li><li><span>1</span>期</li><li><span>2</span>期</li><li><span>3</span>期</li><li><span>4</span>期</li><li><span>5</span>期</li><li><span>6</span>期</li><li><span>7</span>期</li><li><span>8</span>期</li><li><span>9</span>期</li><li><span>10</span>期</li><li><span>11</span>期</li><li><span>13</span>期</li><li><span>14</span>期</li><li><span>15</span>期</li><li><span>16</span>期</li><li><span>17</span>期</li><li><span>19</span>期</li><li><span>20</span>期</li><li><span>21</span>期</li><li><span>22</span>期</li><li><span>23</span>期</li><li><span>25</span>期</li><li><span>26</span>期</li><li><span>27</span>期</li><li><span>28</span>期</li><li><span>29</span>期</li><li><span>30</span>期</li><li><span>31</span>期</li><li><span>32</span>期</li><li><span>33</span>期</li><li><span>34</span>期</li><li><span>35</span>期</li></ul>\
+</div>\
+</div>\
+<input class="mode" type="hidden" value="lender" />\
+<a class="miniBtn" id="normalCal2" href="javascript:void(0);">计算</a>\
+</div>\
+</form></div>\
+<div class="calminiRT">\
+<a class="calminiClose" href="javascript:void(0);"></a>\
+<div class="calminiRTabT">\
+<a class="curr" href="javascript:void(0);">借款计算</a>\
+<a href="javascript:void(0);">出借计算</a>\
+</div>\
+</div>\
+</div>\
+</div>';
+$('body').append(miniHtml);
+
+})

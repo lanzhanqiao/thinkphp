@@ -1,0 +1,58 @@
+/**获取信用报告**/
+.addHref{margin:20px 0 10px 0;width:650px;/*padding-left:27px;*/}
+.addHrefOne{float:left;display:inline;margin-right:32px;margin-bottom:15px;}
+.addHrefOne strong{color:#414141;}
+.addHrefOne a{margin-left:0px;margin-right:0px;display:inline-block;color:#414141;background-color:#e6f4fc;padding:3px 5px;text-align:center;border-radius:3px;}
+.addHrefOne a:hover,.addHrefOne a.cur{background-color:#60bcea;color:#fff;}
+
+.addDetail{box-shadow:0 0 3px #ccc inset;width:640px;border:1px solid #ccc;border-radius:5px;padding-bottom:14px;position:relative;overflow:hidden;/*margin: 0 0 0 27px;*/}
+.p2p_help_content{width:700px;*width:650px;padding:0;overflow:hidden;}
+.p2p_help_content .addDetail h3{margin-top:10px;margin-left:24px;margin-right:24px;padding-left:0px;font-weight:normal;font-size:12px;background:none;width:610px;}
+.p2p_help_content .addDetail h3 span{color:#b6b6b6;font-size:10px;float:right;display:inline;}
+
+.addDetailOneOut{margin-left:24px;margin-top:10px;padding-top:10px;border-top:1px dotted #ccc;}
+.addDetailOneOut ul{margin-top:5px;margin-left:0px;padding-left:0px;}
+.addDetailOneOut ul li{margin-left:12px;padding-left:0px;line-height:160%;}
+
+.addDetailOneOut-one{width:280px;margin-bottom:10px;margin-right:50px;_margin-right:48px;float:left;display:inline;}
+.addDetailOneOut-one h4{font-size:12px;}
+.p2p_help_content .addDetailOneOut-one li{width:280px;}
+.detailBus{position:relative;top:0px;}
+
+/**如何开通网上银行**/
+.bankLogo{border:1px solid #efefef;background-color:#fafaf8;margin:15px 0 0 0 ;width:674px;*width:679px;_width:679px;padding:10px 10px 0 10px;}
+.bankLogo a{border:1px solid #fafaf8;background-image:url(../images/webBankLogo.png);background-repeat:no-repeat;width:162px;height:40px;display:block;over-flow:hidden;text-indent:-999em;float:left;margin-right:4px;margin-bottom:10px;outline:none;}
+.bankLogo a:hover,.bankLogo a.cur{border:1px solid #fff;}
+a.bankLogo01{background-position:0 0;}
+a.bankLogo02{background-position:0 -40px;}
+a.bankLogo03{background-position:0 -80px;}
+a.bankLogo04{background-position:0 -120px;}
+a.bankLogo05{background-position:0 -160px;}
+a.bankLogo06{background-position:0 -200px;}
+a.bankLogo07{background-position:0 -240px;}
+a.bankLogo08{background-position:0 -280px;}
+a.bankLogo09{background-position:0 -320px;}
+a.bankLogo10{background-position:0 -360px;}
+a.bankLogo11{background-position:0 -400px;}
+a.bankLogo12{background-position:0 -440px;}
+a.bankLogo01:hover,a.bankLogo01.cur{background-position:0 -480px;}
+a.bankLogo02:hover,a.bankLogo02.cur{background-position:0 -520px;}
+a.bankLogo03:hover,a.bankLogo03.cur{background-position:0 -560px;}
+a.bankLogo04:hover,a.bankLogo04.cur{background-position:0 -600px;}
+a.bankLogo05:hover,a.bankLogo05.cur{background-position:0 -640px;}
+a.bankLogo06:hover,a.bankLogo06.cur{background-position:0 -680px;}
+a.bankLogo07:hover,a.bankLogo07.cur{background-position:0 -720px;}
+a.bankLogo08:hover,a.bankLogo08.cur{background-position:0 -760px;}
+a.bankLogo09:hover,a.bankLogo09.cur{background-position:0 -800px;}
+a.bankLogo10:hover,a.bankLogo10.cur{background-position:0 -840px;}
+a.bankLogo11:hover,a.bankLogo11.cur{background-position:0 -880px;}
+a.bankLogo12:hover,a.bankLogo12.cur{background-position:0 -920px;}
+
+.bankC a{color:#0CF;}
+.bankCOne{width:695px;margin-top:10px;border:1px solid #ccc;padding-top:38px;padding-bottom:20px;color:#414141;}
+.bankCOne h2{font-size:14px;font-weight:bold;text-align:center;margin-bottom:30px;}
+.bankCOne img{margin:10px auto;display:block;}
+.p2p_help_content p, .p2p_help_content li, .yrd_jobdetail p{margin:0 auto;}
+.loanCmsC{/*padding:27px 15px 0;*/}
+.introduc_s a{color:#F00;}
+.loanCmsC .introduc_s p{text-indent:inherit;}

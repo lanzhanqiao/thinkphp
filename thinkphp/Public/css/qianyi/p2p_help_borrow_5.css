@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+.p2p_help_content.help_borrow_5{font-family: Arial, Helvetica,sans-serif\9; font-family:"宋体",Arial, Helvetica, sans-serif;}
+.p2p_help_content.help_borrow_5 h3{ margin-top:10px;}
+.p2p_help_content.help_borrow_5 p{ text-indent:2em;}
+.p2p_help_content.help_borrow_5 p.des{ text-indent:0;}
+.p2p_help_content.help_borrow_5 .procedure{ padding:20px 0 50px; background-position: -999px -999px}
+.p2p_help_content.help_borrow_5 #container {
+	width:632px;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+}
+.p2p_help_content.help_borrow_5 #example {
+	width:632px;
+	height:500px;
+	position:relative;
+	background:url(../images/borrow_5_bg.png) left bottom no-repeat;
+}
+.p2p_help_content.help_borrow_5 #ribbon {
+	position:absolute;
+	top:-3px;
+	left:-15px;
+	z-index:500;
+}
+.p2p_help_content.help_borrow_5 #frame {
+	position:absolute;
+	z-index:0;
+	width:739px;
+	height:341px;
+	top:-3px;
+	left:-80px;
+}
+
+/*
+	Slideshow
+*/
+.p2p_help_content.help_borrow_5 #slides {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+}
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+.p2p_help_content.help_borrow_5 .slides_container {
+	width:632px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+.p2p_help_content.help_borrow_5 .slides_container div.slide {
+	width:632px;
+	height:441px;
+	display:block;
+}
+/*
+	Next/prev buttons
+*/
+.p2p_help_content.help_borrow_5 #slides .next,.p2p_help_content.help_borrow_5 #slides .prev {
+	position:absolute;
+	top:180px;
+	left:-32px;
+	width:43px;
+	height:59px;
+	display:block;
+	z-index:101;
+	
+}
+.p2p_help_content.help_borrow_5 #slides a.next{background:url(../images/borrow_5_right.png) 0 0 no-repeat;}
+.p2p_help_content.help_borrow_5 #slides a.prev{background:url(../images/borrow_5_left.png) 0 0 no-repeat;}
+.p2p_help_content.help_borrow_5 #slides a.next:hover{background:url(../images/borrow_5_right2.png) 0 0 no-repeat;}
+.p2p_help_content.help_borrow_5 #slides a.prev:hover{background:url(../images/borrow_5_left2.png) 0 0 no-repeat;}
+.p2p_help_content.help_borrow_5 #slides .next img,.p2p_help_content.help_borrow_5 #slides .prev img{ border:0;}
+.p2p_help_content.help_borrow_5 #slides .next {
+	left:618px;
+}
+/*
+	Pagination
+*/
+.p2p_help_content.help_borrow_5 .pagination {
+	margin:-26px auto 0;
+	width:600px;
+	position:absolute;
+	bottom:0;
+	left:30px;
+	z-index:999;
+}
+.p2p_help_content.help_borrow_5 .pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+	width:auto;
+}
+.p2p_help_content.help_borrow_5 .pagination li a {
+	display:block;
+	width:56px;
+	height:0px;
+	padding-top:3px;
+	margin-left:5px;
+	_margin-left:2px;
+	background-image:url(../images/borrow_5_pagination.png);
+	background-repeat:no-repeat;
+	background-position:0 -1px;
+	float:left;
+	overflow:hidden;
+}
+.p2p_help_content.help_borrow_5 .pagination li.current a {
+	background-position:0 -5px;
+}
+/*
+	Caption
+*/
+.p2p_help_content.help_borrow_5 .caption {
+	z-index:500;
+	position:absolute;
+	top:0px;
+	left:0;
+	height:76px;
+	padding:5px 20px 0 20px;
+	background:url(../images/borrow_5_bg2.png) 0 0 no-repeat;
+	width:632px;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#fff;
+	text-shadow:none;
+}
+.p2p_help_content.help_borrow_5 .caption p{ padding:0; margin:0;}
+.p2p_help_content.help_borrow_5 .caption span.num{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	line-height:44px;
+	padding-right:10px;
+	margin-right:5px;
+	border-right:1px dashed #fff;
+	font-family:"宋体", Helvetica, sans-serif;
+ 
+	font-size:32px;
+	text-shadow:2px 2px 2px #3e6b82;
+	}
+.p2p_help_content.help_borrow_5 .caption span.text{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	padding-left:7px;
+	font-family:"宋体", Helvetica, sans-serif;
+ 
+	font-size:14px;
+	text-shadow:2px 2px 2px #3e6b82;
+	vertical-align:text-bottom;
+	}

@@ -1,0 +1,101 @@
+/**
+ * Created with IntelliJ IDEA.
+ * User: jianqing
+ * Date: 13-3-8
+ * Time: 下午4:39
+ * To change this template use File | Settings | File Templates.
+ */
+$(function(){
+    juicer.set({
+        'tag::interpolateOpen': '{{',
+        'tag::interpolateClose': '}}'
+    });
+    var calj = new Calculator('jy'),
+        caln = new Calculator('normal');
+
+    function getCal(mode){
+        if(mode==='jy'){
+            return calj;
+        } else {
+            return caln;
+        }
+    }
+
+    var rate_dic = {12:10, 18: 10.5, 24:11, 36:12},
+        $jyc = $("input.mode[value='jy']").closest('.calToolTBoxC');
+    if($jyc.length==0){
+        $jyc = $("input.mode[value='jy']").closest('.tab_content1');
+    }
+
+    $(".period").closest(".calFBoxRPer").find("a").click(function(){
+        var rateVal = $(this).find("span").text();
+        $(this).closest(".calFBoxRPer").next(".rate").val(rate_dic[rateVal]);
+    })
+
+    $(".calculatorBtn, .counter_button").click(function (){
+        $(".calDetailTable").hide();
+        $(".calDetailT span").text('显示还款列表');
+        $(".calRInsert").slideUp();
+        var $con = $(this).closest('.calToolTBoxC');
+        if($con.length==0){
+            $con = $(this).closest('.tab_content1');
+        }
+        var principal = $.trim($con.find('.calNumHide').val()),
+            period = $con.find('.period').val(),
+            rate = $con.find('.rate').val(),
+            mode = $con.find('.mode').val(),
+            range_dic = {'jy':{'min':10000, 'max':500000}, 'normal':{'min':1000, 'max':500000}, 'lender':{'min':100,'max':5000000}};
+            // alert("principal:"+principal+",period:"+period+",rate:"+rate+",mode:"+mode);
+        if(principal.length==0){
+            alert("请输入借款金额");
+            // $con.find('.principal').focus();
+            return;
+        } else if(!/^[0-9]+(.[0-9]{1,2})?$/.test(principal)){
+            alert("借款金额只能输入数字且最多小数点后两位");
+            // $con.find('.principal').focus();
+            $con.find('.principal').next(".calNum").html('<span class="png n0"></span>');
+            $con.find(".calNumHide").val("");
+            return;
+        }  else if(principal<range_dic[mode]['min']||principal>range_dic[mode]['max']){
+            alert("单笔最低"+ (mode==='lender'?"出借":"借款") +"额度为"+ range_dic[mode]['min'] + "元，最高"+ (mode==='lender'?"出借":"借款") +"额度为" + range_dic[mode]['max'] + "元");
+            // $con.find('.principal').focus();
+            $con.find('.principal').next(".calNum").html('<span class="png n0"></span>');
+            $con.find(".calNumHide").val("");
+            return;
+        }
+
+        if(mode=="lender"){
+            if(rate.length==0){
+                alert("请选择出借利率");
+                return;
+            }
+        }
+        if(mode=="jy"){
+            if(period.length==0){
+                alert("请选择借款期数");
+                return;
+            }
+        } else if(mode=="lender"){
+            if(period.length==0){
+                alert("请选择出借期数");
+                return;
+            }
+        }
+
+        if(rate=='-1'){
+            alert("请选择借款年利率");
+            return;
+        }
+        var plan = getCal(mode).calculate(principal, period, rate/100);
+        plan['mode'] = mode;
+        plan['repay'] = round(parseFloat(plan.principal) + parseFloat(plan.interest));
+        var htmls = juicer($('#' + mode + '-template').html(), plan);
+        
+       
+        $(".calRInsert").slideDown(function(){
+            $(this).html(htmls);
+        });
+    });
+
+
+})

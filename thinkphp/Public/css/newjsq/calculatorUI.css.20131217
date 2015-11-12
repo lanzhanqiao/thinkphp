@@ -1,0 +1,126 @@
+.calculatorUI a,.calculatorUI a:visited{text-decoration:none;}
+.calIntro{width:596px;margin-top: 24px;margin-bottom: 12px;letter-spacing:1px;}
+.calTool{background:url("../images/calculator/calToolBg.jpg") no-repeat #31312f;width:643px;height:341px;padding-top: 36px;}
+.calToolTBox{width:490px;margin-left: 95px;}
+.calToolTBoxC{width:452px;height:302px;border:1px solid #dededf;float:left;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#cacbcc));
+	background: -webkit-linear-gradient(top, #ffffff, #cacbcc);
+	background: -moz-linear-gradient(top, #ffffff, #cacbcc);
+	background: -o-linear-gradient(top, #ffffff, #cacbcc);
+	background: -ms-linear-gradient(top, #ffffff, #cacbcc);
+	background: linear-gradient(top, #ffffff, #cacbcc);
+	background-color: #ffffff;
+	vertical-align: 
+}
+.calToolTBoxT{float:left;width:35px;padding-top:40px;margin-left: 0px;}
+.loanCmsC .calToolTBoxT a,.loanCmsC .calToolTBoxT a:visited{width:27px;font-size:14px;font-family:\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',SimHei,SimSun;display:block;text-align:center;padding-top: 12px;padding-bottom: 12px;
+	background-color:#788588;color:#fff;line-height:115%;margin-bottom: 14px;border-top:1px solid #717171;border-right:1px solid #717171;border-bottom:1px solid #717171;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	-o-border-radius: 0px 5px 5px 0px;
+	-ms-border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 5px 5px 0px;
+	-webkit-box-shadow: inset 2px 0px 2px #5d6162;
+	-moz-box-shadow: inset 2px 0px 2px #5d6162;
+	-o-box-shadow: inset 2px 0px 2px #5d6162;
+	-ms-box-shadow: inset 2px 0px 2px #5d6162;
+	box-shadow: inset 2px 0px 2px #5d6162;
+}
+.calToolTBoxT a.curr,.calToolTBoxT a:visited.curr{color:#5c6668;margin-left: -1px;
+	background: -webkit-gradient(linear, left top, right top, from(#fbfbfb), to(#e0e0e0));
+	background: -webkit-linear-gradient(top, #fbfbfb, #e0e0e0);
+	background: -moz-linear-gradient(top, #fbfbfb, #e0e0e0);
+	background: -o-linear-gradient(top, #fbfbfb, #e0e0e0);
+	background: -ms-linear-gradient(top, #fbfbfb, #e0e0e0);
+	background: linear-gradient(top, #fbfbfb, #e0e0e0);
+	background-color: #fbfbfb;
+	box-shadow:none;
+}
+.calToolTBoxT a:nth-child(2).curr,.calToolTBoxT a:nth-child(2):visited.curr{
+	background: -webkit-gradient(linear, left top, right top, from(#e4e4e4), to(#d0d1d1));
+	background: -webkit-linear-gradient(top, #e4e4e4, #d0d1d1);
+	background: -moz-linear-gradient(top, #e4e4e4, #d0d1d1);
+	background: -o-linear-gradient(top, #e4e4e4, #d0d1d1);
+	background: -ms-linear-gradient(top, #e4e4e4, #d0d1d1);
+	background: linear-gradient(top, #e4e4e4, #d0d1d1);
+	background-color: #fbfbfb;
+}
+.calFBox{margin-left: 30px;}
+.calFBoxL1,.calFBoxL2{color:#393939;font-size:14px;float:left;width:70px;margin-right: 5px;}
+.calFBoxL1{margin-top: 20px;}
+.calFBoxL2{margin-top: 8px;}
+
+.calNumHide{width:300px;height:46px;line-height:46px;text-align:right;background-color:#ffcb31;color:#907310;font-size:30px;border:1px solid #fff;font-family:Arial, Helvetica, sans-serif;padding-right: 10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow: inset 0px 0px 5px #d2aa38;
+-moz-box-shadow: inset 0px 0px 5px #d2aa38;
+-o-box-shadow: inset 0px 0px 5px #d2aa38;
+-ms-box-shadow: inset 0px 0px 5px #d2aa38;
+box-shadow: inset 0px 0px 5px #d2aa38;
+}
+
+.mtTB{margin-top: 56px;margin-bottom: 34px;}
+.mtTB2{margin-top: 30px;margin-bottom: 15px;}
+.mtB{margin-bottom: 15px;}
+
+.calFBoxRPer{float:left;padding-left: 2px;}
+.loanCmsC .calFBoxRPer a,.loanCmsC .calFBoxRPer a:visited,.loanCmsC .calFBoxRPer2 a,.loanCmsC .calFBoxRPer2 a:visited,.loanCmsC .calFBoxSel a,.loanCmsC .calFBoxSel a:visited{font-family:\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',SimHei,SimSun;font-size:16px;color:#292c30;text-shadow:0 1px 1px #a6adb0;display:block;height:36px;background-position:0 0;color:#2c2f30;text-align:center;line-height:35px;float:left;margin-right: 3px;}
+.calFBoxRPer a,.calFBoxRPer a:visited{width:76px;background:url("../images/calculator/calFBoxRPer.png") no-repeat;}
+.calFBoxRPer2 a,.calFBoxRPer2 a:visited{width:69px;background:url("../images/calculator/calFBoxRPer2.png") no-repeat;}
+.calFBoxSel a,.calFBoxSel a:visited{width:102px;background:url("../images/calculator/calFBoxRPer3.png") no-repeat;}
+.loanCmsC .calFBoxRPer a.curr,.loanCmsC .calFBoxRPer a:visited.curr,.loanCmsC .calFBoxRPer2 a.curr,.loanCmsC .calFBoxRPer2 a:visited.curr,.loanCmsC .calFBoxSel a.curr,.loanCmsC .calFBoxSel a:visited.curr{background-position:0 -35px;text-shadow:0 1px 1px #1e2021;color:#fff;}
+a.calculatorBtn,a:visited.calculatorBtn{background:url("../images/calculator/calculatorBtn.gif") no-repeat;display:block;width:151px;height:35px;margin:33px auto;}
+
+/*calculatorUI result*/
+.calRInsert{width:100%;}
+.loanCmsC a.calDetailT,.loanCmsC a:visited.calDetailT{background-color:#768185;border:1px solid #717171;color:#fff;font-size:14px;font-family:\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',SimHei,SimSun;display:block;text-align:center;height:38px;line-height:38px;width:642px;margin:0 auto;position:relative;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;}
+.loanCmsC a:hover.calDetailT{background-color:#707b7f;text-shadow:0 1px 1px #515a5d;}
+.loanCmsC a.calDetailT i,.loanCmsC a:visited.calDetailT i{display:block;width:22px;height:22px;position:absolute;right:20px;top:7px;background:url("../images/calculator/calDetailIcon.png") no-repeat 0 0;}
+.loanCmsC a.calDetailT.curr i,.loanCmsC a:visited.calDetailT.curr i{background:url("../images/calculator/calDetailIcon.png") no-repeat 0 -22px;}
+
+.calResult,.calDetailTable{border:1px solid #bfbfbf;width:644px;margin:12px auto;_border-collapse:collapse;
+	-webkit-box-shadow:0 3px 3px #eee;
+	-moz-box-shadow:0 3px 3px #eee;
+	box-shadow:0 3px 3px #eee;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.loanCmsC table.calResult tr th,.loanCmsC table.calResult tr td,.loanCmsC table.calDetailTable tr th,.loanCmsC table.calDetailTable tr td{height:40px;border-bottom:1px solid #bfbfbf;}
+.loanCmsC table.calResult tr td strong,.loanCmsC table.calResult tr td strong,.loanCmsC table.calDetailTable tbody tr td strong{color:#C10000;}
+.loanCmsC table.calResult tbody tr th{width:320px;}
+.loanCmsC table.calResult tbody tr th,.loanCmsC table.calResult tbody tr td{text-align:left;text-indent:20px;}
+.loanCmsC table.calDetailTable tr th,.loanCmsC table.calDetailTable tr td{text-align:center;}
+.loanCmsC table.calResult thead tr th,.loanCmsC table.calDetailTable thead tr th{background-color:#eaeaea;color:#f16e04;}
+.loanCmsC table.calResult tbody tr th,.loanCmsC table.calResult tbody tr td,.loanCmsC table.calDetailTable tbody tr th,.loanCmsC table.calDetailTable tbody tr td{color:#515151;border-right:1px solid #bfbfbf;}
+.loanCmsC table.calResult tbody tr th:last-child,.loanCmsC table.calResult tbody tr td:last-child,.loanCmsC table.calDetailTable tbody tr th:last-child,.loanCmsC table.calDetailTable tbody tr td:last-child{border-right:0;}
+.loanCmsC table.calResult tbody tr:last-child td,.loanCmsC table.calResult tbody tr:last-child th,.loanCmsC table.calDetailTable tbody tr:last-child td{border-bottom:0;}
+.calFBoxL2.nl,.calFBoxRPer.nl{float:none;}
+.calFBoxL2.mb{margin-bottom: 9px;}
+a.calculatorBtn.mt,a:visited.calculatorBtn.mt{margin-top:20px;}
+.loanCmsC table.calResult td,.loanCmsC table.calDetailTable td{border-top:0;border-right:1px solid #bfbfbf;border-left:0;}
+.loanCmsC table.calResult,.loanCmsC table.calDetailTable{border-right:1px solid #bfbfbf;border-bottom:1px solid #bfbfbf;}
+
+/*calFBoxSel*/
+.calFBox{position:relative;}
+.calFBoxSel{width:102px;background-color:#fff;position:absolute;right:30px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;}
+.loanCmsC .calFBoxSel a,.loanCmsC .calFBoxSel a:visited{position:relative;text-align:left;text-indent:10px;_margin-right:0;}
+.calFBoxSel a i,.calFBoxSel a:visited i{background:url("../images/calculator/iconSel.png") no-repeat 0 0;display:block;width:12px;height:9px;position:absolute;right:8px;top:14px;_overflow:hidden;}
+.calFBoxSel a i.on,.calFBoxSel a:visited i.on{background:url("../images/calculator/iconSel.png") no-repeat 0 -9px;}
+.calFBoxSelChild{width:102px;height:142px;position:relative; margin:0px auto; padding:0px;border:1px solid #ccc;border-top:0;overflow: hidden;}
+.calFBoxSelChild ul li{text-align:center;line-height:20px;display:block;color:#5f5f5f;cursor:pointer;} 
+.calFBoxSelChild ul li.curr{background-color:#63686a;color:#fff;}
+.calFBoxSelChild.none{display:none;}
+.calFBoxSel a.bgOn,.calFBoxSel a:visited.bgOn{background:url("../images/calculator/calFBoxRPer3.png") no-repeat 0 -36px;color:#fff;text-shadow:0 1px 1px #484d4e;}
+

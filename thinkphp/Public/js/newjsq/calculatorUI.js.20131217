@@ -1,0 +1,98 @@
+$(function(){
+	// calToolTBox Tab
+	$(".calToolTBoxT a").click(function(){
+		$(".calToolTBoxT a").removeClass("curr");
+		$(".principal,.period,.rate").val("");
+		$(".calFBoxRPer,.calFBoxRPer2,.calFBoxRPer3").find("a").removeClass("curr");
+		$(".calFBoxSel a").removeClass("bgOn");
+		$(".calFBoxSel a i").removeClass("on");
+		$(".calFBoxSel a span").text("全部期数");
+		$(".calRInsert").html("");
+
+		$(this).addClass("curr");
+		var num = $(this).index();
+		$(".calTool .calToolTBoxC").hide();
+		$(".calTool .calToolTBoxC").eq(num).show();
+	})
+
+	$(".calNumHide").focus(function(){
+		$(this).css('backgroundColor','#fec314');
+	})
+	$(".calNumHide").blur(function(){
+		$(this).css('backgroundColor','#ffcb31');
+	})
+
+	// calFBoxRPer a
+	$(".calFBoxRPer a").click(function(){
+		$(".calFBoxRPer a").removeClass("curr");
+		$(this).addClass("curr");
+		var spanVal = $(this).children('span').text();
+		$(this).closest(".calFBoxRPer").find("input").val(spanVal);
+	})
+
+	// calFBoxRPer2 
+	$(".calFBoxRPer2 .calFBoxA").click(function(){
+		var $calFBoxRPer2 = $(this).closest(".calFBoxRPer2")
+		$calFBoxRPer2.find(".calFBoxSel a").removeClass("bgOn");
+		$calFBoxRPer2.find(".calFBoxSel a i").removeClass("on");
+		$calFBoxRPer2.find(".calFBoxSel a span").text("全部期数");
+		$calFBoxRPer2.find(".calFBoxSelChild").hide();
+
+		$(".calFBoxRPer2 a").removeClass("curr");
+		$(this).addClass("curr");
+		var txtVal = $(this).find("span").text();
+		$(this).closest(".calFBoxRPer2").find(".period").val(txtVal);
+	})
+	$("body").on("click",".calFBoxSelChild li",function(){
+		var txtVal = $(this).find("span").text();
+		$(this).closest(".calFBoxRPer2").find(".period").val(txtVal);
+	})
+
+	// calculatorUI detail
+	$("body").on("click",".calDetailT",function(){
+		var txtVal = "显示还款列表",
+			$spanTxt = $(this).find("span"),
+			thisTxt = $spanTxt.text(),
+			$calDetailTable = $(this).next(".calDetailTable");
+		if(txtVal == thisTxt){
+			$spanTxt.text("收起还款列表");
+			$(this).addClass("curr");
+			$calDetailTable.slideDown();
+		} else {
+			$spanTxt.text(txtVal);
+			$(this).removeClass("curr");
+			$calDetailTable.slideUp();
+		}
+	})
+
+	// calFBoxSel
+	$(".calFBoxSel a").click(function(){
+		$per2 = $(this).closest(".calFBoxRPer2");
+		$per2.find(".calFBoxA").removeClass("curr");
+
+		var ifCurr = $(this).find("i").hasClass("curr"),
+			$calFBoxSelChild = $(this).next(".calFBoxSelChild");
+		if(!ifCurr){
+			$calFBoxSelChild.show();
+			$(this).addClass("bgOn");
+			$(this).find("i").addClass("on");
+		} else {
+			$calFBoxSelChild.hide();
+			$(this).removeClass("bgOn");
+			$(this).find("i").removeClass("on");
+		}
+		
+	})
+	$(".calFBoxSelChild ul li").hover(
+		function(){$(this).addClass("curr");},
+		function(){$(this).removeClass("curr");}
+	)
+	$(".calFBoxSelChild ul li").click(function(){
+		var x = $(this).find("span").text();
+		$(this).closest(".calFBoxSel").find("a").find("span").text(x+"期");
+		$(this).closest(".calFBoxSelChild").hide();
+		$(this).closest(".calFBoxSel").find("a").find("i").removeClass("on");
+	})
+	// perfectScrollbar
+	$(".calFBoxSelChild").perfectScrollbar();
+})
